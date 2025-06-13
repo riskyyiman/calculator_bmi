@@ -1,4 +1,4 @@
-package dev.jahidhasanco.bmicalculator
+package riskyiman.bmicalculator.dev
 
 import org.junit.Test
 

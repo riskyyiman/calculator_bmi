@@ -4,328 +4,301 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backgroundColorAdditional"
-        tools:context=".presentation.activity.MainActivity">
+        android:background="@color/darkBackground"
+        tools:context="riskyiman.bmicalculator.dev.activity.MainActivity">
 
         <ScrollView
-            android:id="@+id/scrollView2"
+            android:id="@+id/scrollView"
             android:layout_width="0dp"
             android:layout_height="0dp"
+            android:fadeScrollbars="false"
+            android:overScrollMode="never"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-           >
+            app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp">
 
-
+                <!-- App Title -->
                 <TextView
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="80dp"
                     android:fontFamily="@font/larsseit_bold"
                     android:gravity="center_vertical"
-                    android:paddingLeft="20dp"
-                    android:paddingRight="20dp"
+                    android:paddingStart="24dp"
+                    android:paddingEnd="24dp"
                     android:text="@string/app_name"
-                    android:textColor="@color/textColor"
-                    android:textSize="22sp"
+                    android:textColor="@color/lightTextPrimary"
+                    android:textSize="24sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <!--        <LinearLayout-->
-                <!--            android:id="@+id/linearLayout2"-->
-                <!--            android:layout_width="match_parent"-->
-                <!--            android:layout_height="1dp"-->
-                <!--            android:background="@drawable/rounded_dash_main"-->
-                <!--            app:layout_constraintEnd_toEndOf="parent"-->
-                <!--            app:layout_constraintStart_toStartOf="parent"-->
-                <!--            app:layout_constraintTop_toBottomOf="@+id/textView"-->
-                <!--            android:orientation="horizontal">-->
-
-                <!--            <ImageView-->
-                <!--                android:layout_width="match_parent"-->
-                <!--                android:layout_height="match_parent"-->
-                <!--                android:src="@drawable/mike"-->
-                <!--                android:scaleType="fitCenter"-->
-                <!--                />-->
-
-                <!--        </LinearLayout>-->
-
-                <!--    main container    -->
+                <!-- Main Content Container -->
                 <LinearLayout
                     android:id="@+id/bodyContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
                     android:baselineAligned="false"
-                    android:paddingBottom="50dp"
+                    android:paddingBottom="40dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView">
 
-                    <!--            gender and weight container-->
+                    <!-- Gender and Weight Column -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
-                        <LinearLayout
+                        <!-- Gender Selection -->
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:background="@drawable/rounded_dash_main2"
-                            android:elevation="25dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:fontFamily="@font/larsseit_medium"
-                                android:gravity="center"
-                                android:text="GENDER"
-                                android:textColor="@color/textColor"
-                                android:textSize="20sp" />
-
-                            <me.sujanpoudel.wheelview.WheelView
-                                android:id="@+id/gender_wheel_view"
-                                android:layout_width="match_parent"
-                                android:layout_height="140dp"
-                                android:layout_marginTop="10dp"
-                                android:layout_marginBottom="10dp"
-                                android:elevation="0dp"
-                                app:wheelAnchorAngle="270"
-                                app:wheelAnimationDuration="800"
-                                app:wheelArcBackgroundColor="@color/backgroundColorAdditional2"
-                                app:wheelCenterIcon="@drawable/ic_user"
-                                app:wheelCenterIconPadding="1dp"
-                                app:wheelCenterIconTint="@color/white"
-                                app:wheelDividerStrokeWidth="4dp"
-                                app:wheelMode="ANIMATE_TO_ANCHOR"
-                                app:wheelSelectedArcBackgroundColor="?attr/colorPrimary"
-                                app:wheelSelectedTextColor="@color/white"
-                                app:wheelStartAngle="315"
-                                app:wheelTextColor="@color/textColorInWheel"
-                                app:wheelTextSize="14sp"
-
-                                />
-
-                        </LinearLayout>
-
-                        <!--            Weight Container        />-->
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="40dp"
-                            android:background="@drawable/rounded_dash_main"
-                            android:elevation="25dp"
-                            android:orientation="vertical">
+                            android:elevation="8dp"
+                            app:cardBackgroundColor="@color/darkCardBackground"
+                            app:cardCornerRadius="12dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="50dp"
-                                android:gravity="center"
-                                android:orientation="horizontal"
-                                android:paddingBottom="10dp">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:fontFamily="@font/larsseit_medium"
-                                    android:gravity="bottom"
-                                    android:text="WEIGHT"
-                                    android:textColor="@color/textColor"
-                                    android:textSize="20sp" />
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="match_parent"
-                                    android:fontFamily="@font/larsseit_medium"
-                                    android:gravity="bottom"
-                                    android:paddingBottom="3.4dp"
-                                    android:text="(KG)"
-                                    android:textColor="@color/textColorAdditional"
-                                    android:textSize="8sp" />
-
-                            </LinearLayout>
-
-                            <androidx.constraintlayout.widget.ConstraintLayout
-                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_marginStart="10dp"
-                                android:layout_marginTop="30dp"
-                                android:layout_marginEnd="10dp"
-                                android:layout_marginBottom="20dp"
-                                android:background="@drawable/rounded_dash"
                                 android:orientation="vertical">
 
-
-                                <androidx.recyclerview.widget.RecyclerView
-                                    android:id="@+id/weightRecyclerBtn"
+                                <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="80dp"
-                                    android:layout_centerHorizontal="true"
-                                    android:layout_centerVertical="true"
-                                    android:clipToPadding="true"
-                                    android:paddingStart="32dp"
-                                    android:paddingEnd="32dp"
-                                    android:textSize="15sp"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
+                                    android:layout_height="56dp"
+                                    android:fontFamily="@font/larsseit_medium"
+                                    android:gravity="center"
+                                    android:text="GENDER"
+                                    android:textColor="@color/lightTextPrimary"
+                                    android:textSize="18sp" />
 
-                                <ImageView
-                                    android:id="@+id/imageView"
-                                    android:layout_width="18dp"
-                                    android:layout_height="11dp"
-                                    android:layout_gravity="center"
-                                    android:scaleType="fitXY"
-                                    android:src="@drawable/ic_triangle"
-                                    app:layout_constraintBottom_toBottomOf="parent"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintStart_toStartOf="parent" />
+                                <me.sujanpoudel.wheelview.WheelView
+                                    android:id="@+id/gender_wheel_view"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="160dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_marginBottom="16dp"
+                                    app:wheelAnchorAngle="270"
+                                    app:wheelAnimationDuration="800"
+                                    app:wheelArcBackgroundColor="@color/darkSecondaryBackground"
+                                    app:wheelCenterIcon="@drawable/ic_user"
+                                    app:wheelCenterIconPadding="1dp"
+                                    app:wheelCenterIconTint="@color/accentColor"
+                                    app:wheelDividerStrokeWidth="4dp"
+                                    app:wheelMode="ANIMATE_TO_ANCHOR"
+                                    app:wheelSelectedArcBackgroundColor="@color/accentColor"
+                                    app:wheelSelectedTextColor="@color/lightTextPrimary"
+                                    app:wheelStartAngle="315"
+                                    app:wheelTextColor="@color/lightTextSecondary"
+                                    app:wheelTextSize="16sp" />
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
 
-                            </androidx.constraintlayout.widget.ConstraintLayout>
-
-                        </LinearLayout>
-
-
-                    </LinearLayout>
-
-
-                    <!--            Height Container-->
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="5dp"
-                        android:layout_marginEnd="20dp"
-                        android:layout_weight="1"
-                        android:background="@drawable/rounded_dash_main"
-                        android:orientation="vertical">
-
-                        <LinearLayout
-                            android:id="@+id/linearLayout"
-                            android:layout_width="match_parent"
-                            android:layout_height="50dp"
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:paddingBottom="10dp"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:fontFamily="@font/larsseit_medium"
-                                android:gravity="bottom"
-                                android:text="HEIGHT"
-                                android:textColor="@color/textColor"
-                                android:textSize="20sp" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:fontFamily="@font/larsseit_medium"
-                                android:gravity="bottom"
-                                android:paddingBottom="3.4dp"
-                                android:text="(CM)"
-                                android:textColor="@color/textColorAdditional"
-                                android:textSize="8sp" />
-
-                        </LinearLayout>
-
-                        <com.cncoderx.wheelview.WheelView
-                            android:id="@+id/height_wheel"
+                        <!-- Weight Selection -->
+                        <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-                            app:wheelCyclic="true"
-                            app:wheelDividerColor="@color/backgroundColorAdditional2"
-                            app:wheelEntries="@array/default_array"
-                            app:wheelHighlightColor="@color/backgroundColor"
-                            app:wheelItemCount="9"
-                            app:wheelItemHeight="38dp"
-                            app:wheelItemWidth="100dp"
-                            app:wheelSelectedTextColor="?attr/colorPrimary"
-                            app:wheelTextColor="@color/textColor"
-                            app:wheelTextSize="15sp" />
+                            android:layout_marginTop="24dp"
+                            android:elevation="8dp"
+                            app:cardBackgroundColor="@color/darkCardBackground"
+                            app:cardCornerRadius="12dp">
 
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="56dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
 
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/larsseit_medium"
+                                        android:gravity="center"
+                                        android:text="WEIGHT"
+                                        android:textColor="@color/lightTextPrimary"
+                                        android:textSize="18sp" />
 
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/larsseit_medium"
+                                        android:gravity="center"
+                                        android:paddingStart="4dp"
+                                        android:text="(KG)"
+                                        android:textColor="@color/lightTextSecondary"
+                                        android:textSize="10sp" />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="16dp"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="16dp"
+                                    android:layout_marginBottom="24dp"
+                                    app:cardBackgroundColor="@color/darkSecondaryBackground"
+                                    app:cardCornerRadius="8dp">
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:paddingVertical="8dp">
+
+                                        <androidx.recyclerview.widget.RecyclerView
+                                            android:id="@+id/weightRecyclerBtn"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="80dp"
+                                            android:clipToPadding="false"
+                                            android:paddingStart="32dp"
+                                            android:paddingEnd="32dp"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent"
+                                            app:layout_constraintTop_toTopOf="parent" />
+
+                                        <ImageView
+                                            android:id="@+id/imageView"
+                                            android:layout_width="18dp"
+                                            android:layout_height="11dp"
+                                            android:src="@drawable/ic_triangle"
+                                            app:tint="@color/accentColor"
+                                            app:layout_constraintBottom_toBottomOf="parent"
+                                            app:layout_constraintEnd_toEndOf="parent"
+                                            app:layout_constraintStart_toStartOf="parent" />
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                    </LinearLayout>
+
+                    <!-- Height Column -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginEnd="16dp"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="@color/darkCardBackground"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="8dp">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/heightHeader"
+                                android:layout_width="match_parent"
+                                android:layout_height="56dp"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/larsseit_medium"
+                                    android:gravity="center"
+                                    android:text="HEIGHT"
+                                    android:textColor="@color/lightTextPrimary"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/larsseit_medium"
+                                    android:gravity="center"
+                                    android:paddingStart="4dp"
+                                    android:text="(CM)"
+                                    android:textColor="@color/lightTextSecondary"
+                                    android:textSize="10sp" />
+                            </LinearLayout>
+
+                            <com.cncoderx.wheelview.WheelView
+                                android:id="@+id/height_wheel"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="16dp"
+                                android:layout_marginBottom="16dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/heightHeader"
+                                app:wheelCyclic="true"
+                                app:wheelDividerColor="@color/darkSecondaryBackground"
+                                app:wheelEntries="@array/default_array"
+                                app:wheelHighlightColor="@color/darkCardBackground"
+                                app:wheelItemCount="9"
+                                app:wheelItemHeight="42dp"
+                                app:wheelItemWidth="100dp"
+                                app:wheelSelectedTextColor="@color/accentColor"
+                                app:wheelTextColor="@color/lightTextSecondary"
+                                app:wheelTextSize="16sp" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </androidx.cardview.widget.CardView>
                 </LinearLayout>
 
-                <androidx.constraintlayout.widget.ConstraintLayout
+                <!-- Footer with Swipe Button -->
+                <androidx.cardview.widget.CardView
                     android:id="@+id/footerContainer"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/darkCardBackground"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="8dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/bodyContainer">
 
-
-                    <!--            <Button-->
-                    <!--                android:id="@+id/start_button"-->
-                    <!--                android:layout_width="100dp"-->
-                    <!--                android:layout_height="wrap_content"-->
-                    <!--                android:background="@drawable/round_button_blue"-->
-                    <!--                android:fontFamily="@font/larsseit_bold"-->
-                    <!--                android:text="@string/start"-->
-                    <!--                android:textSize="15sp"-->
-                    <!--                android:layout_margin="20dp"-->
-                    <!--                app:layout_constraintBottom_toBottomOf="parent"-->
-                    <!--                app:layout_constraintEnd_toEndOf="parent"-->
-                    <!--                app:layout_constraintStart_toStartOf="parent"-->
-                    <!--                app:layout_constraintTop_toTopOf="parent" />-->
-
                     <com.example.swipebutton_library.SwipeButton
                         android:id="@+id/start_button"
-                        android:layout_width="200dp"
+                        android:layout_width="240dp"
                         android:layout_height="wrap_content"
-                        android:layout_margin="8dp"
-                        android:elevation="20dp"
-                        app:button_background_drawable="@drawable/circular_white_background"
+                        android:layout_margin="16dp"
+                        android:elevation="12dp"
+                        app:button_background_drawable="@drawable/circular_accent_background"
                         app:button_background_padding="0dp"
                         app:button_background_src="@drawable/ic_pacman"
-                        app:button_background_tint="@color/backgroundColorAdditional"
-                        app:button_height="70dp"
-                        app:button_width="40dp"
+                        app:button_background_tint="@color/lightTextPrimary"
+                        app:button_height="72dp"
+                        app:button_width="48dp"
                         app:has_active_status="false"
                         app:inner_text="...."
-                        app:inner_text_color="?attr/colorPrimary"
+                        app:inner_text_color="@color/accentColor"
                         app:inner_text_gravity="center"
-                        app:inner_text_size="50sp"
-                        app:inner_text_top_padding="-33dp"
+                        app:inner_text_size="52sp"
+                        app:inner_text_top_padding="-36dp"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        app:outer_background_drawable="@drawable/circular_white_background"
-                        app:outer_background_height="40dp"
+                        app:outer_background_drawable="@drawable/circular_dark_background"
+                        app:outer_background_height="48dp"
                         app:trail_enabled="false" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
+                </androidx.cardview.widget.CardView>
             </androidx.constraintlayout.widget.ConstraintLayout>
-
         </ScrollView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

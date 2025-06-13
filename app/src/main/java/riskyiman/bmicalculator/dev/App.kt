@@ -1,4 +1,4 @@
-package dev.jahidhasanco.bmicalculator
+package riskyiman.bmicalculator.dev
 
 import android.app.Application
 import com.google.android.material.color.DynamicColors

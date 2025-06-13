@@ -1,4 +1,4 @@
-package dev.jahidhasanco.bmicalculator.presentation.activity
+package riskyiman.bmicalculator.dev.activity
 
 
 import android.Manifest
@@ -17,8 +17,8 @@ import androidx.core.view.setPadding
 import androidx.databinding.DataBindingUtil
 import dev.jahidhasanco.bmicalculator.R
 import dev.jahidhasanco.bmicalculator.databinding.ActivityResultBinding
-import dev.jahidhasanco.bmicalculator.utils.displayToast
-import dev.jahidhasanco.bmicalculator.utils.saveBitmap
+import riskyiman.bmicalculator.dev.utils.displayToast
+import riskyiman.bmicalculator.dev.utils.saveBitmap
 
 
 class ResultActivity : AppCompatActivity() {

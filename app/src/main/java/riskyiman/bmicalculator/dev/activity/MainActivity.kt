@@ -1,4 +1,4 @@
-package dev.jahidhasanco.bmicalculator.presentation.activity
+package riskyiman.bmicalculator.dev.activity
 
 import android.content.Intent
 import android.os.Build
@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.SnapHelper
 import com.cncoderx.wheelview.OnWheelChangedListener
 import dev.jahidhasanco.bmicalculator.R
 import dev.jahidhasanco.bmicalculator.databinding.ActivityMainBinding
-import dev.jahidhasanco.bmicalculator.presentation.adapter.WeightPickerAdapter
+import riskyiman.bmicalculator.dev.adapter.WeightPickerAdapter
 import travel.ithaka.android.horizontalpickerlib.PickerLayoutManager
 
 

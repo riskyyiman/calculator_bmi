@@ -11,8 +11,8 @@
         android:id="@+id/detail_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/backgroundColorAdditional"
-        tools:context=".presentation.activity.ResultActivity">
+        android:background="@color/darkBackground"
+        tools:context="riskyiman.bmicalculator.dev.activity.ResultActivity">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -28,13 +28,13 @@
                     android:id="@+id/textView"
                     android:layout_width="match_parent"
                     android:layout_height="70dp"
-                    android:background="@color/backgroundColorAdditional"
+                    android:background="@color/darkBackground"
                     android:fontFamily="@font/larsseit_bold"
                     android:gravity="center"
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:text="Your Health"
-                    android:textColor="@color/textColor"
+                    android:textColor="@color/white"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +70,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView" />
 
-
                 <TextView
                     android:id="@+id/bmiText"
                     android:layout_width="match_parent"
@@ -96,7 +95,7 @@
                     android:paddingLeft="20dp"
                     android:paddingRight="20dp"
                     android:text="@string/normal_bmi_weight_range_for_the_height_18_5_24_9"
-                    android:textColor="@color/textColorAdditional"
+                    android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -1,4 +1,4 @@
-package dev.jahidhasanco.bmicalculator.presentation.adapter
+package riskyiman.bmicalculator.dev.adapter
 
 
 import android.annotation.SuppressLint
